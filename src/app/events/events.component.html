@@ -1,0 +1,45 @@
+<div class="animated flipInY">
+  <h2 style="font-size: 30px" >EVENTS</h2>
+  <blockquote *ngFor="let event of events">
+    <div class="divEvent" >
+      <b > Name: {{event.name}}</b>
+      <br>
+      <b> Description : {{event.description}}</b>
+      <br>
+      <b> Location:{{event.location}}</b>
+      <br><b> Date:{{event.date}}</b><br>
+      <b>Participants:{{event.participants}}</b>
+      <br>
+      <a type="button" (click)="deleteEvent(event)" class="text-danger">Delete Event</a>
+    </div>
+
+
+  </blockquote>
+</div>
+
+<div class="createEvent" >
+  <h3 style="font-size: 30px">CREATE EVENT</h3>
+
+  <form class="animated bounceInUp" (ngSubmit)="onSubmit()">
+    <label>Name: </label>
+    <input type="text" class="form-control" placeholder="name" [(ngModel)]="newEvent.name" name="name"><br><br>
+    <label>Description: </label>
+    <input type="text" class="form-control" placeholder="description" [(ngModel)]="newEvent.description" name="description"><br><br>
+    <label>Location: </label>
+    <select class="form-control" [(ngModel)]="newEvent.location" name="location">
+      <option value="Timis">Timis</option>
+      <option value="Caras">Caras</option>
+      <option value="Arad">Arad</option>
+      <option value="Moldova">Moldova</option>
+    </select>
+    <br><br>
+    <label>Date: </label>
+    <input type="text" [(ngModel)]="newEvent.date" name="date">
+    <br><br>
+
+
+    <div class="right-align">
+      <button type="submit" style="font-size: 20px" class="btn">Submit Event</button>
+    </div>
+  </form>
+</div>

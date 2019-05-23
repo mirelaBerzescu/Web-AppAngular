@@ -1,0 +1,27 @@
+.new-event{
+  max-width: 320px;
+}
+
+
+.divEvent {
+  width: 700px;
+  padding: 15px;
+  border: 5px solid brown;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: white;
+}
+
+form{
+  width: 700px;
+  padding: 5px;
+  margin: 35px;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: black;
+  font-weight: bold;
+  background-color: beige;
+}
